@@ -1,0 +1,23 @@
+name: Build iPod App
+
+on:
+workflow_dispatch:
+
+jobs:
+build:
+runs-on: macos-latest
+
+steps:
+- name: Download project
+uses: actions/checkout@v4
+
+- name: Build for iPhone Simulator
+run: |
+xcodebuild \
+-project iPodWheelPrototype.xcodeproj \
+-scheme iPodWheelPrototype \
+-sdk iphonesimulator \
+-configuration Debug \
+-destination 'generic/platform=iOS Simulator' \
+CODE_SIGNING_ALLOWED=NO \
+build
