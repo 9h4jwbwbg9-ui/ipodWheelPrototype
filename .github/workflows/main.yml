@@ -1,7 +1,22 @@
-name: Test Mac
-on: [workflow_dispatch]
+name: Build iPod App
+
+"on": [workflow_dispatch]
+
 jobs:
-  test:
+  build:
     runs-on: macos-latest
+
     steps:
-      - run: echo "Mac runner is working"
+      - name: Get project
+        uses: actions/checkout@v4
+
+      - name: Build iPod app
+        run: |
+              xcodebuild \
+              -project iPodWheelPrototype.xcodeproj \
+              -scheme iPodWheelPrototype \
+              -sdk iphonesimulator \
+              -configuration Debug \
+              -destination 'generic/platform=iOS Simulator' \
+              CODE_SIGNING_ALLOWED=NO \
+              build
