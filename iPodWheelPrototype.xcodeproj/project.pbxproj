@@ -5,79 +5,253 @@
 	};
 	objectVersion = 56;
 	objects = {
-		000000000000000000000001 /* Project object */ = {
-			isa = PBXProject;
-			attributes = { LastUpgradeCheck = 1600; };
-			buildConfigurationList = 000000000000000000000010;
-			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = ( en, Base );
-			mainGroup = 000000000000000000000002;
-			productRefGroup = 000000000000000000000003;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = ( 000000000000000000000020 );
-		};
-		000000000000000000000002 /* Main group */ = {
-			isa = PBXGroup;
-			children = (
-				000000000000000000000004 /* iPodWheelPrototypeApp.swift */,
-				000000000000000000000005 /* PlayerSettings.swift */,
-				000000000000000000000006 /* HapticManager.swift */,
-				000000000000000000000007 /* PlayerView.swift */,
-				000000000000000000000008 /* CustomizationView.swift */,
-				000000000000000000000009 /* Info.plist */,
-			);
-			sourceTree = "<group>";
-		};
-		000000000000000000000003 /* Products */ = {
-			isa = PBXGroup;
-			children = ( 000000000000000000000030 /* iPodWheelPrototype.app */ );
-			name = Products;
-			sourceTree = "<group>";
-		};
-		000000000000000000000004 /* iPodWheelPrototypeApp.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodWheelPrototypeApp.swift; sourceTree = "<group>"; };
-		000000000000000000000005 /* PlayerSettings.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
-		000000000000000000000006 /* HapticManager.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
-		000000000000000000000007 /* PlayerView.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		000000000000000000000008 /* CustomizationView.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationView.swift; sourceTree = "<group>"; };
-		000000000000000000000009 /* Info.plist */ = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000000000000000000030 /* iPodWheelPrototype.app */ = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPodWheelPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000000000000000020 /* App target */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 000000000000000000000011;
-			buildPhases = ( 000000000000000000000021, 000000000000000000000022 );
-			buildRules = ();
-			dependencies = ();
-			name = iPodWheelPrototype;
-			productName = iPodWheelPrototype;
-			productReference = 000000000000000000000030;
-			productType = "com.apple.product-type.application";
-		};
-		000000000000000000000021 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+
+/* Begin PBXBuildFile section */
+		100000000000000000000101 /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000201 /* AlbumListView.swift */; };
+		100000000000000000000102 /* ArtistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000202 /* ArtistListView.swift */; };
+		100000000000000000000103 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000203 /* ArtworkView.swift */; };
+		100000000000000000000104 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000204 /* AudioPlayerManager.swift */; };
+		100000000000000000000105 /* ClickWheelPhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000205 /* ClickWheelPhysics.swift */; };
+		100000000000000000000106 /* CustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000206 /* CustomizationView.swift */; };
+		100000000000000000000107 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000207 /* HapticManager.swift */; };
+		100000000000000000000108 /* IPodHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000208 /* IPodHomeView.swift */; };
+		100000000000000000000109 /* IPodMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000209 /* IPodMenu.swift */; };
+		100000000000000000000110 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000210 /* LibraryView.swift */; };
+		100000000000000000000111 /* MiniPlayerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000211 /* MiniPlayerBar.swift */; };
+		100000000000000000000112 /* MusicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000212 /* MusicItem.swift */; };
+		100000000000000000000113 /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000213 /* MusicLibrary.swift */; };
+		100000000000000000000114 /* PlayerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000214 /* PlayerSettings.swift */; };
+		100000000000000000000115 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000215 /* PlayerView.swift */; };
+		100000000000000000000116 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000216 /* Playlist.swift */; };
+		100000000000000000000117 /* PlaylistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000217 /* PlaylistManager.swift */; };
+		100000000000000000000118 /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000218 /* PlaylistView.swift */; };
+		100000000000000000000119 /* ThemePreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000219 /* ThemePreset.swift */; };
+		100000000000000000000120 /* iPodWheelPrototypeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000220 /* iPodWheelPrototypeApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		100000000000000000000201 /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
+		100000000000000000000202 /* ArtistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListView.swift; sourceTree = "<group>"; };
+		100000000000000000000203 /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
+		100000000000000000000204 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		100000000000000000000205 /* ClickWheelPhysics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickWheelPhysics.swift; sourceTree = "<group>"; };
+		100000000000000000000206 /* CustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationView.swift; sourceTree = "<group>"; };
+		100000000000000000000207 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		100000000000000000000208 /* IPodHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPodHomeView.swift; sourceTree = "<group>"; };
+		100000000000000000000209 /* IPodMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPodMenu.swift; sourceTree = "<group>"; };
+		100000000000000000000210 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		100000000000000000000211 /* MiniPlayerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerBar.swift; sourceTree = "<group>"; };
+		100000000000000000000212 /* MusicItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicItem.swift; sourceTree = "<group>"; };
+		100000000000000000000213 /* MusicLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
+		100000000000000000000214 /* PlayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
+		100000000000000000000215 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		100000000000000000000216 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		100000000000000000000217 /* PlaylistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistManager.swift; sourceTree = "<group>"; };
+		100000000000000000000218 /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
+		100000000000000000000219 /* ThemePreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePreset.swift; sourceTree = "<group>"; };
+		100000000000000000000220 /* iPodWheelPrototypeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodWheelPrototypeApp.swift; sourceTree = "<group>"; };
+		100000000000000000000221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100000000000000000000301 /* iPodWheelPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPodWheelPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100000000000000000000401 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
-				000000000000000000000041,
-				000000000000000000000042,
-				000000000000000000000043,
-				000000000000000000000044,
-				000000000000000000000045,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000000000000000022 /* Resources */ = { isa = PBXResourcesBuildPhase; files = (); runOnlyForDeploymentPostprocessing = 0; };
-		000000000000000000000041 = { isa = PBXBuildFile; fileRef = 000000000000000000000004; };
-		000000000000000000000042 = { isa = PBXBuildFile; fileRef = 000000000000000000000005; };
-		000000000000000000000043 = { isa = PBXBuildFile; fileRef = 000000000000000000000006; };
-		000000000000000000000044 = { isa = PBXBuildFile; fileRef = 000000000000000000000007; };
-		000000000000000000000045 = { isa = PBXBuildFile; fileRef = 000000000000000000000008; };
-		000000000000000000000010 = { isa = XCConfigurationList; buildConfigurations = ( 000000000000000000000050, 000000000000000000000051 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-		000000000000000000000011 = { isa = XCConfigurationList; buildConfigurations = ( 000000000000000000000052, 000000000000000000000053 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-		000000000000000000000050 = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
-		000000000000000000000051 = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
-		000000000000000000000052 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = Info.plist; PRODUCT_BUNDLE_IDENTIFIER = com.example.iPodWheelPrototype; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Debug; };
-		000000000000000000000053 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = Info.plist; PRODUCT_BUNDLE_IDENTIFIER = com.example.iPodWheelPrototype; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Release; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100000000000000000000002 /* Main group */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000201 /* AlbumListView.swift */,
+				100000000000000000000202 /* ArtistListView.swift */,
+				100000000000000000000203 /* ArtworkView.swift */,
+				100000000000000000000204 /* AudioPlayerManager.swift */,
+				100000000000000000000205 /* ClickWheelPhysics.swift */,
+				100000000000000000000206 /* CustomizationView.swift */,
+				100000000000000000000207 /* HapticManager.swift */,
+				100000000000000000000208 /* IPodHomeView.swift */,
+				100000000000000000000209 /* IPodMenu.swift */,
+				100000000000000000000210 /* LibraryView.swift */,
+				100000000000000000000211 /* MiniPlayerBar.swift */,
+				100000000000000000000212 /* MusicItem.swift */,
+				100000000000000000000213 /* MusicLibrary.swift */,
+				100000000000000000000214 /* PlayerSettings.swift */,
+				100000000000000000000215 /* PlayerView.swift */,
+				100000000000000000000216 /* Playlist.swift */,
+				100000000000000000000217 /* PlaylistManager.swift */,
+				100000000000000000000218 /* PlaylistView.swift */,
+				100000000000000000000219 /* ThemePreset.swift */,
+				100000000000000000000220 /* iPodWheelPrototypeApp.swift */,
+				100000000000000000000221 /* Info.plist */,
+				100000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		100000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000301 /* iPodWheelPrototype.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		100000000000000000000020 /* App target */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100000000000000000000011;
+			buildPhases = (
+				100000000000000000000021 /* Sources */,
+				100000000000000000000401 /* Frameworks */,
+				100000000000000000000022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPodWheelPrototype;
+			productName = iPodWheelPrototype;
+			productReference = 100000000000000000000301 /* iPodWheelPrototype.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 100000000000000000000010;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 100000000000000000000002;
+			productRefGroup = 100000000000000000000003;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100000000000000000000020,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100000000000000000000022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100000000000000000000021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000101 /* AlbumListView.swift in Sources */,
+				100000000000000000000102 /* ArtistListView.swift in Sources */,
+				100000000000000000000103 /* ArtworkView.swift in Sources */,
+				100000000000000000000104 /* AudioPlayerManager.swift in Sources */,
+				100000000000000000000105 /* ClickWheelPhysics.swift in Sources */,
+				100000000000000000000106 /* CustomizationView.swift in Sources */,
+				100000000000000000000107 /* HapticManager.swift in Sources */,
+				100000000000000000000108 /* IPodHomeView.swift in Sources */,
+				100000000000000000000109 /* IPodMenu.swift in Sources */,
+				100000000000000000000110 /* LibraryView.swift in Sources */,
+				100000000000000000000111 /* MiniPlayerBar.swift in Sources */,
+				100000000000000000000112 /* MusicItem.swift in Sources */,
+				100000000000000000000113 /* MusicLibrary.swift in Sources */,
+				100000000000000000000114 /* PlayerSettings.swift in Sources */,
+				100000000000000000000115 /* PlayerView.swift in Sources */,
+				100000000000000000000116 /* Playlist.swift in Sources */,
+				100000000000000000000117 /* PlaylistManager.swift in Sources */,
+				100000000000000000000118 /* PlaylistView.swift in Sources */,
+				100000000000000000000119 /* ThemePreset.swift in Sources */,
+				100000000000000000000120 /* iPodWheelPrototypeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		100000000000000000000050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		100000000000000000000051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		100000000000000000000052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iPodWheelPrototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		100000000000000000000053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iPodWheelPrototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100000000000000000000010 /* Project configuration list */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000050 /* Debug */,
+				100000000000000000000051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100000000000000000000011 /* Target configuration list */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000052 /* Debug */,
+				100000000000000000000053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
 	};
-	rootObject = 000000000000000000000001;
+	rootObject = 100000000000000000000001 /* Project object */;
 }
