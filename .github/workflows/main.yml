@@ -1,12 +1,7 @@
-on:
-push:
-branches:
-- main
-workflow_dispatch:
-
+name: Test Mac
+on: [workflow_dispatch]
 jobs:
-test:
-runs-on: macos-latest
-steps:
-- name: Test Mac
-run: echo "Mac runner is working"
+  test:
+    runs-on: macos-latest
+    steps:
+      - run: echo "Mac runner is working"
