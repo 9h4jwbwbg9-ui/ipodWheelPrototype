@@ -1,0 +1,83 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = { LastUpgradeCheck = 1600; };
+			buildConfigurationList = 000000000000000000000010;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = ( en, Base );
+			mainGroup = 000000000000000000000002;
+			productRefGroup = 000000000000000000000003;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = ( 000000000000000000000020 );
+		};
+		000000000000000000000002 /* Main group */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000004 /* iPodWheelPrototypeApp.swift */,
+				000000000000000000000005 /* PlayerSettings.swift */,
+				000000000000000000000006 /* HapticManager.swift */,
+				000000000000000000000007 /* PlayerView.swift */,
+				000000000000000000000008 /* CustomizationView.swift */,
+				000000000000000000000009 /* Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = ( 000000000000000000000030 /* iPodWheelPrototype.app */ );
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000004 /* iPodWheelPrototypeApp.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodWheelPrototypeApp.swift; sourceTree = "<group>"; };
+		000000000000000000000005 /* PlayerSettings.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
+		000000000000000000000006 /* HapticManager.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		000000000000000000000007 /* PlayerView.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		000000000000000000000008 /* CustomizationView.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationView.swift; sourceTree = "<group>"; };
+		000000000000000000000009 /* Info.plist */ = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000030 /* iPodWheelPrototype.app */ = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPodWheelPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000020 /* App target */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000011;
+			buildPhases = ( 000000000000000000000021, 000000000000000000000022 );
+			buildRules = ();
+			dependencies = ();
+			name = iPodWheelPrototype;
+			productName = iPodWheelPrototype;
+			productReference = 000000000000000000000030;
+			productType = "com.apple.product-type.application";
+		};
+		000000000000000000000021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				000000000000000000000041,
+				000000000000000000000042,
+				000000000000000000000043,
+				000000000000000000000044,
+				000000000000000000000045,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000022 /* Resources */ = { isa = PBXResourcesBuildPhase; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000000041 = { isa = PBXBuildFile; fileRef = 000000000000000000000004; };
+		000000000000000000000042 = { isa = PBXBuildFile; fileRef = 000000000000000000000005; };
+		000000000000000000000043 = { isa = PBXBuildFile; fileRef = 000000000000000000000006; };
+		000000000000000000000044 = { isa = PBXBuildFile; fileRef = 000000000000000000000007; };
+		000000000000000000000045 = { isa = PBXBuildFile; fileRef = 000000000000000000000008; };
+		000000000000000000000010 = { isa = XCConfigurationList; buildConfigurations = ( 000000000000000000000050, 000000000000000000000051 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000011 = { isa = XCConfigurationList; buildConfigurations = ( 000000000000000000000052, 000000000000000000000053 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000050 = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+		000000000000000000000051 = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+		000000000000000000000052 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = Info.plist; PRODUCT_BUNDLE_IDENTIFIER = com.example.iPodWheelPrototype; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Debug; };
+		000000000000000000000053 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = Info.plist; PRODUCT_BUNDLE_IDENTIFIER = com.example.iPodWheelPrototype; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Release; };
+	};
+	rootObject = 000000000000000000000001;
+}
