@@ -27,12 +27,9 @@ struct AlbumSongsView: View {
 
     var body: some View {
         List(library.songs(forAlbum: album)) { item in
-            Button {
-                player.play(item: item, library: library, queue: library.songs(forAlbum: album))
-            } label: {
-                SongRow(item: item)
-            }
-            .buttonStyle(.plain)
+SongRow(item: item) {
+    player.play(item: item, library: library, queue: library.songs(forAlbum: album))
+}
         }
         .navigationTitle(album)
     }
