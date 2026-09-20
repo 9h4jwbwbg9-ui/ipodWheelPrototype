@@ -93,42 +93,9 @@ struct LibraryView: View {
     }
 }
 
-struct ArtistListView: View {
-    @EnvironmentObject var library: MusicLibrary
 
-    var body: some View {
-        List(library.artists, id: \.self) { artist in
-            NavigationLink(artist) {
-                SongListView(title: artist, songs: library.songs(forArtist: artist))
-            }
-        }
-        .navigationTitle("Artists")
-    }
-}
 
-struct AlbumListView: View {
-    @EnvironmentObject var library: MusicLibrary
 
-    var body: some View {
-        List(library.albums, id: \.self) { album in
-            NavigationLink {
-                SongListView(title: album, songs: library.songs(forAlbum: album))
-            } label: {
-                HStack(spacing: 12) {
-                    let song = library.songs(forAlbum: album).first
-                    ArtworkView(data: song?.artworkData, size: 52)
-                    VStack(alignment: .leading) {
-                        Text(album)
-                        Text(song?.artist ?? "Unknown Artist")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                }
-            }
-        }
-        .navigationTitle("Albums")
-    }
-}
 
 struct SongListView: View {
     @EnvironmentObject var library: MusicLibrary
