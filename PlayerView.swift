@@ -175,7 +175,7 @@ struct PlayerView: View {
         }
 
         let destination: IPodDestination
-        switch menuIndex {
+        switch selectedIndex {
         case 0: destination = .nowPlaying
         case 1: destination = .music
         case 2: destination = .playlists
@@ -185,7 +185,7 @@ struct PlayerView: View {
         }
 
         menuOpen = false
-        haptic.click(intensity: settings.hapticIntensity)
+        HapticManager().click(intensity: settings.hapticIntensity)
         navigate(destination)
     }
 
