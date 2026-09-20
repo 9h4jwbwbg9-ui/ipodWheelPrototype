@@ -29,7 +29,7 @@ struct IPodHomeView: View {
         .environmentObject(settings)
         .environmentObject(playlists)
         .onAppear {
-            player.configure(library: library)
+
         }
     }
 
