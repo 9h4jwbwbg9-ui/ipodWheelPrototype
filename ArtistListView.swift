@@ -24,7 +24,9 @@ struct ArtistSongsView: View {
             Button {
                 player.play(item: item, library: library, queue: library.songs(forArtist: artist))
             } label: {
-                SongRow(item: item)
+                SongRow(item: item) {
+    player.play(item: item, library: library, queue: library.songs(forArtist: artist))
+}
             }
             .buttonStyle(.plain)
         }
