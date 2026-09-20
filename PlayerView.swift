@@ -185,7 +185,7 @@ struct PlayerView: View {
         }
 
         menuOpen = false
-        HapticManager().click(intensity: settings.hapticIntensity)
+        HapticManager().click(intensity: Float(settings.hapticIntensity))
         navigate(destination)
     }
 
