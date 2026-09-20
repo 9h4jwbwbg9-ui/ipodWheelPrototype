@@ -5,7 +5,7 @@ import UIKit
 import Combine
 
 @MainActor
-final class AudioPlayerManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
+final class AudioPlayerManager: NSObject, ObservableObject,@preconcurrency AVAudioPlayerDelegate {
     @Published private(set) var currentItem: MusicItem?
     @Published private(set) var isPlaying = false
     @Published private(set) var progress: TimeInterval = 0
