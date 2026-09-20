@@ -21,6 +21,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             build
 
+
       - name: Save iPhone simulator app
         uses: actions/upload-artifact@v4
         with:
