@@ -27,4 +27,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: iPodWheelPrototype-Simulator
-          path: iPodWheelPrototype.build/Debug-iphonesimulator/iPodWheelPrototype.app
+          path: build/Build/Products/Debug-iphonesimulator/iPodWheelPrototype.app
