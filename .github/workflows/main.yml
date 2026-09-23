@@ -15,7 +15,7 @@ jobs:
           xcodebuild \
             -project iPodWheelPrototype.xcodeproj \
             -scheme iPodWheelPrototype \
-            -sdk iphones \
+            -sdk iphoneos \
             -configuration Debug \
             -destination 'generic/platform=iOS' \
             -derivedDataPath build \
